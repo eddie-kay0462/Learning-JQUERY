@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedding Jquery and Syntax</title>
+    <!-- to embed jquery from the scripts folder -->
+    <!-- <script src="js/jquery-3.7.1.min.js"></script> -->
+
+    <!--  we can also embed jquery from the cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <p id="myParagraph">Jquery</p>
+    <script>
+        //the below code will change the color of the paragraph to blue
+        // Jquery syntax
+        $(document).ready(function(){
+            $("#myParagraph").css("color", "red");
+        });
+
+
+        //the below code will hide the paragraph
+        $(document).ready(function(){
+            $("#myParagraph").hide();
+        });
+
+        //the below code will show the paragraph
+        $(document).ready(function(){
+            $("#myParagraph").show();
+        });
+
+        //the below code will toggle the paragraph
+        // $(document).ready(function(){
+        //     $("#myParagraph").toggle();
+        // }); 
+
+        //the below code will fade out the paragraph
+        // $(document).ready(function(){
+        //     $("#myParagraph").fadeOut();
+        // });
+
+
+        //the below code will fade in the paragraph
+        // $(document).ready(function(){
+        //     $("#myParagraph").fadeIn();
+        // });
+
+        
+    </script>
+</body>
+</html>
