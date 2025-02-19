@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <style>
+        .bluebox{
+          background-color: #3A5795;
+          color: white;
+          height: 100px;
+          width:auto;
+      }
+      .yellowbox{
+          background-color: rgb(222, 224, 85);
+          height: 100px;
+          width: auto;
+      }
+      .greenbox{
+          background-color: #31af37;
+          height: 100px;
+          width: auto;
+      }
+      #great{
+          background-color: #5a3479;
+      }
+	</style>
+  <!--  we can also embed jquery from the cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  </head>
+  
+  <body>
+    <div class="bluebox" id="facebook"><p> Facebook is <span id="great">great</span></p>
+    </div>
+    <div class="yellowbox" id="apple"><p>Apple.</p></div>
+    <div class="greenbox">
+        <p>Microsoft.</p>
+        <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft link</a></p>
+    </div>
+    <p><input></p>
+    <button id="changeFb">Change Facebook Text</button>
+    <button id="changeApple">Change Apple Text</button>
+    <button id="changeInput">Change Input Value</button>
+    <button id="changemicrsoftLink">Change Microsoft Link</button>
+    <script>
+        $(function(){
+            //change the microsoft link
+            $("#changemicrsoftLink").click(function(){
+                $("#microsoftLink").attr("href", "http://www.google.com");
+                $("#microsoftLink").attr("title", "Google");
+            });
+        });
+    </script>
+    <!-- <script>
+        $(function(){
+            //change the text in the bluebox
+            // $("#changeFb").click(function(){
+            //     $("#facebook").html("<p>Ah fuck! Facebook is not great</p>");
+            // });
+
+            //change the text in the apple
+            // $("#changeApple").click(function(){
+            //     $("#apple").html("<p>Ah fuck! Those apples taste like ass!</p>");
+            // });
+
+            //change input
+            // $("#changeInput").click(function(){
+            //     $("input").val("Damn!!!");
+            // });
+
+            // change 
+
+        });
+
+        
+    </script> -->
+  </body>
+  
+  
+</html>
