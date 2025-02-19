@@ -70,9 +70,9 @@
       <p>Type your name: <input type="text" name="name"><button>Submit</button></p>
     </div>
     <script>
-        $(document).ready(function(){
+        // $(document).ready(function(){
           
-            $("*").css("font-size", "16px"); //selects all elements, and changes the font size to 32px
+            // $("*").css("font-size", "16px"); //selects all elements, and changes the font size to 32px
 
             // $("p").css("text-align", "center"); //selects all paragraph elements, and changes the text alignment to center
 
@@ -82,16 +82,16 @@
 
             //$("div ~ p").css("font-size", "24px"); //selects all paragraph elements that are siblings of div elements, and changes the font size to 24px
 
-            $("div > p").css("text-align", "center"); //selects all paragraph elements that are direct children of div elements, and changes the color to green
+            // $("div > p").css("text-align", "center"); //selects all paragraph elements that are direct children of div elements, and changes the color to green
 
             //now we wanto to select element with a specific id
 
-            $("#great").css("background-color", "green");  //selects the element with the id "great", and changes the color to green
+            // $("#great").css("background-color", "green");  //selects the element with the id "great", and changes the color to green
 
             //now we want to select elements with a specific class
-            $(".orange").css("background-color", "orange"); //selects the element with the class "orange", and changes the color to orange
+            // $(".orange").css("background-color", "orange"); //selects the element with the class "orange", and changes the color to orange
 
-            $("div.bluebox").css("font-family", "Courier");
+            // $("div.bluebox").css("font-family", "Courier");
             //selects the element with the class "bluebox", and changes the color to blue
 
             //$("p:last-child").css("color", "yellow"); //selects the first child of all paragraph elements, and changes the color to red
@@ -99,23 +99,74 @@
             //we can select both the first and last child of an element
            // $("p:first-child, p:last-child").css("color", "yellow"); //selects the first and last child of all paragraph elements, and changes the color to yellow
 
-           $("p:first-child, p:last-child").css("text-decoration", "underline"); //selects the first and last child of all paragraph elements, and changes the text decoration to underline
+        //    $("p:first-child, p:last-child").css("text-decoration", "underline"); //selects the first and last child of all paragraph elements, and changes the text decoration to underline
 
 
-           $("[href]").css("background-color", "red"); //selects all elements with an href attribute, and changes the color to red
+        //    $("[href]").css("background-color", "red"); //selects all elements with an href attribute, and changes the color to red
 
-           $("li:first-child").css("background-color", "blue"); //selects the first child of all list items, and changes the color to blue
+        //    $("li:first-child").css("background-color", "blue"); //selects the first child of all list items, and changes the color to blue
 
-           $("li:last-child").css("background-color", "blue"); //selects the first child of all list items, and changes the color to blue
+        //    $("li:last-child").css("background-color", "blue"); //selects the first child of all list items, and changes the color to blue
 
-           $("tr:even").css("background-color", "yellow"); //selects all even table rows, and changes the color to yellow
+        //    $("tr:even").css("background-color", "yellow"); //selects all even table rows, and changes the color to yellow
 
-           $("tr:odd").css("background-color", "white"); //selects all odd table rows, and changes the color to yellow
+        //    $("tr:odd").css("background-color", "white"); //selects all odd table rows, and changes the color to yellow
 
-           $("input[type='text']").css("background-color", "green"); //selects all input elements with a type attribute value of "text", and changes the color to green
-           $(":button").css("background-color", "green"); //selects all button elements, and changes the color to green
+        //    $("input[type='text']").css("background-color", "green"); //selects all input elements with a type attribute value of "text", and changes the color to green
+        //    $(":button").css("background-color", "green"); //selects all button elements, and changes the color to green
 
-           $("div:has(table)").css("background-color", "red"); //selects all div elements that contain a table element, and changes the color to red
+        //    $("div:has(table)").css("background-color", "black"); //selects all div elements that contain a table element, and changes the color to red
+        // });
+
+        //Lesson 132 (JQuery): Responding to Events
+        $(function (){
+          //the code below will change the background color of the paragraph element to red when it is clicked
+          // $('p').click(function(){
+          //   $(this).css('background-color', 'red');
+          // });
+
+          //if we want to change the color of all paragraph elements when any paragraph element is clicked
+          // $('p').click(function(){
+          //   $('p').css('background-color', 'red');
+          // });
+
+          //the code below will change the background color of the paragraph element to red when the mouse is over it
+          // $('p').hover(function(){
+          //   $(this).css('background-color', 'red');
+          // });
+
+          //the code below will change the background color of all paragraph elements to red when the mouse is over any paragraph element
+          // $('p').hover(function(){
+          //   $('p').css('background-color', 'red');
+          // });
+
+          //when a mouse leaves a paragraph element, the background color will change to white
+          // $('p').mouseleave(function(){
+          //   $(this).css('background-color', 'white');
+          // });
+
+          //the code below will change the background color of the input element to black when it is clicked, and the text color to white
+          // $('input').focus(function(){
+          //   $(this).css('background-color', 'black');
+          //   $(this).css('color', 'white');
+          // });
+
+          //the code below will change the background color of the input element to yellow when a key is pressed
+          $('input').keyup(function(){
+            $(this).css('background-color', 'yellow');
+          });
+
+           //the code below will change the background color of the input element to yellow when it is clicked, and the text color to black
+           $('input').blur(function(){
+            $(this).css('background-color', 'red');
+            $(this).css('color', 'black');
+          });
+
+          //the code below will clear the input field when the button is clicked
+          $('button').click(function(){
+            
+            $('input').val(''); //clears the input field');
+          });
         });
     </script>
   </body>
