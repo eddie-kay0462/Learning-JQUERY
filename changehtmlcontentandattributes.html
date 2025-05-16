@@ -40,12 +40,12 @@
         <p>Microsoft.</p>
         <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft link</a></p>
     </div>
-    <p><input></p>
+    <p><input type="text" id="input" value="Enter your name"></p>
     <button id="changeFb">Change Facebook Text</button>
-    <button id="changeApple">Change Apple Text</button>
+    <button id="changeApple">Change Apple HTML</button>
     <button id="changeInput">Change Input Value</button>
-    <button id="changemicrsoftLink">Change Microsoft Link</button>
-    <script>
+    <button id="changemicrosoftLink">Change Microsoft Link</button>
+    <!-- <script>
         $(function(){
             //change the microsoft link
             $("#changemicrsoftLink").click(function(){
@@ -53,30 +53,28 @@
                 $("#microsoftLink").attr("title", "Google");
             });
         });
-    </script>
-    <!-- <script>
+    </script> -->
+    <script>
         $(function(){
-            //change the text in the bluebox
-            // $("#changeFb").click(function(){
-            //     $("#facebook").html("<p>Ah fuck! Facebook is not great</p>");
-            // });
-
-            //change the text in the apple
-            // $("#changeApple").click(function(){
-            //     $("#apple").html("<p>Ah fuck! Those apples taste like ass!</p>");
-            // });
-
-            //change input
-            // $("#changeInput").click(function(){
-            //     $("input").val("Damn!!!");
-            // });
-
-            // change 
-
+            $("#changeFb").click(
+                function(){
+                  $("#facebook").text("This is facebook!")
+                }
+            );
+            $("#changeApple").click(
+                function(){
+                  $("#apple").html("<p>This is an apple!</p><p>New IOS available.</p>")
+                }
+            );
+            $("#changemicrosoftLink").click(
+                function(){
+                  $("#microsoftLink").attr({"href": "http://www.google.com", "title": "Google"})
+                }
+            );
         });
 
         
-    </script> -->
+    </script>
   </body>
   
   
